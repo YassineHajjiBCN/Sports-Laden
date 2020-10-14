@@ -1,13 +1,110 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html{
+  font-size:60%;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  font: 1.6rem Helvetica;
+  height: 100vh;
+  margin: 0;
 }
+
+.grid-container{
+  display: grid;
+  grid-template-areas:
+  "header"
+  "main"
+  "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 860px;
+}
+
+.header{
+  grid-area: header;
+  background-color: rgb(5, 52, 191);
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .25rem;
+}
+.brand a { 
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+.header-links a { 
+  color: #ffffff;
+
+}
+.header-links a:hover {
+  color: rgb(251, 67, 54);
+}
+.main{
+  grid-area: main;
+}
+.footer{
+  grid-area: footer ;
+  background-color:  rgb(5, 52, 191);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a{
+  text-decoration: none;
+}
+a .product-name:hover{
+  color: cornflowerblue;
+}
+
+/* Home screen*/
+.products{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; 
+}
+.products li{
+  padding: 0;
+  list-style-type: none;
+  flex: 0 1 34rem;
+  margin: 1rem;
+  height: 42rem;
+  border-bottom: .1rem blue solid;
+  
+}
+ 
+.product{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+ 
+.product-name{
+  font-size: 2rem;
+  font-weight: bold;
+}
+.product-name a:hover{
+  color: cadetblue;
+}
+.product-brand{
+  font-size: 1.2rem;
+  color: rgb(137, 124, 106);
+}
+.product-price{
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.product-image{
+  max-width: 30rem;
+  max-height: 45rem;
+}
+.product-rating{
+  margin-bottom: 1rem;
+  
+}
+ 
+/*sidebar*/
